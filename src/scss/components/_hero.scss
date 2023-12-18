@@ -1,10 +1,15 @@
 .hero {
-  background-image: url(../img/hero/background.jpg);
+  background-image: url(../img/hero/background-mobile@1x.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
   @extend %flex-center;
   padding-top: 200px;
+  @media (min-device-pixel-ratio:2),
+  (min-resolution:192dpi),
+  (min-resolution: 2) {
+    background-image: url(../img/hero/background-mobile@2x.jpg);
+  }
 }
 .hero__container {
   @extend %flex-center;
@@ -30,6 +35,14 @@
   }
 }
 @media (min-width: 768px) {
+  .hero {
+    background-image: url(../img/hero/background-tablet@1x.jpg);
+    @media (min-device-pixel-ratio:2),
+  (min-resolution:192dpi),
+  (min-resolution: 2) {
+    background-image: url(../img/hero/background-tablet@2x.jpg);
+  }
+  }
   .hero__container {
     gap: 35px;
   }
@@ -40,3 +53,16 @@
     font-size: 24px;
   }
 }
+
+
+@media (min-width:1440px)  {
+  .hero {
+    background-image: url(../img/hero/background-dektop@1x.jpg);
+    @media (min-device-pixel-ratio:2),
+  (min-resolution:192dpi),
+  (min-resolution: 2) {
+    background-image: url(../img/hero/background-dektop@2x.jpg);
+  }
+}
+}
+
